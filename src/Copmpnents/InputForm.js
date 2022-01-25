@@ -5,9 +5,7 @@ const InputForm = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        if(count === 0 || count < 0) {
-            return;
-        }
+
         props.onGenerate(+count)
       };
 

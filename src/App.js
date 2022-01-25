@@ -4,8 +4,14 @@ import data from "./data";
 function App() {
   const [paragraphs, setParagraphs] = useState([]);
 
- const generatorHandler = (num) => {
-   setParagraphs(data.slice(0, num))
+ const generatorHandler = (amount) => {
+   if(amount <= 0){
+    amount = 1
+  }
+   if(amount > 8){
+    amount = 9
+  }
+   setParagraphs(data.slice(0, amount))
  }
   
   
